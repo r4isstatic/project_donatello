@@ -1,0 +1,33 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :rumoured_flag %><br>
+    <%= f.check_box :rumoured_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :one_source_confirmed_flag %><br>
+    <%= f.check_box :one_source_confirmed_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :two_sources_confirmed_flag %><br>
+    <%= f.check_box :two_sources_confirmed_flag %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

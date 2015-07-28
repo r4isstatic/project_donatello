@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Rumoured flag:</strong>
+  <%= @event.rumoured_flag %>
+</p>
+
+<p>
+  <strong>One source confirmed flag:</strong>
+  <%= @event.one_source_confirmed_flag %>
+</p>
+
+<p>
+  <strong>Two sources confirmed flag:</strong>
+  <%= @event.two_sources_confirmed_flag %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
